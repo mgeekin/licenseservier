@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{lic.title}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 5px;
+            color: white;
+            background: hsla(220, 50%, 20%, 1);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>{{lic.title}}</h1>
+        <h2>Free to use till 2022</h2>
+        <hr />
+        <table>
+            <tr>
+                <td>key</td>
+                <td>{{lic.key}}</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>{{lic.type}}</td>
+            </tr>
+            <tr>
+                <td>year</td>
+                <td>{{lic.year}}</td>
+            </tr>
+        </table>
+    </div>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+    <script>
+        const lic = {
+            'key': 'afsadlfkjh234909@#$',
+            'type': 'beta',
+            'year': 2022,
+            'title': 'Name of software'
+
+        }
+
+        var content = document.body.innerHTML
+        document.body.innerHTML = content.replace('{{lic.key}}', lic.key).replace('{{lic.year}}', lic.year).replace('{{lic.title}}', lic.title).replace('{{lic.type}}', lic.type)
+        document.title = lic.title
+    </script>
+</body>
+
+</html>
